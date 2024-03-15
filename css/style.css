@@ -1,0 +1,520 @@
+/** @format */
+:root {
+  --firstColor: #43766c;
+  --secondColor: #76453b;
+  --thirdColor: #b19470;
+  --fourthColor: #f8fae5;
+
+  --hoverFirstColor: #e4a600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: var(--fourthColor);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Navbar Start*/
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: var(--fourthColor);
+  color: var(--firstColor);
+  height: auto;
+  border-bottom: 0.125rem solid var(--firstColor);
+  width: 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 1rem 6.5rem !important;
+}
+
+.navbar .navbar-left {
+  font-size: 1.5rem;
+  font-weight: 800;
+  /* padding-left: 6.75rem; */
+}
+
+.navbar .navbar-right .options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* padding-right: 6.75rem; */
+}
+.navbar .navbar-right .options a {
+  transition: all ease 0.5s;
+}
+
+.navbar .navbar-right .options a:hover {
+  color: var(--hoverFirstColor);
+}
+
+.navbar .navbar-right .options .button {
+  border: none;
+  background-color: var(--firstColor);
+  color: var(--fourthColor);
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.25rem 0.125rem;
+  border-radius: 0.725rem;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.navbar .navbar-right .options .button:hover,
+.lokasi .row form .btn:hover {
+  color: var(--fourthColor);
+  background-color: var(--hoverFirstColor);
+}
+
+#extra {
+  display: none;
+}
+/* Navbar End */
+
+/* Home Start */
+.home {
+  min-height: 93.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/bg-darken.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    var(--fourthColor),
+    rgba(248, 250, 229, 0) 20%
+  );
+}
+
+.content-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40rem;
+  font-size: 1.75rem;
+  font-family: "Marck Script", handwriting;
+  color: var(--fourthColor);
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: "Marck Script", handwriting;
+  color: var(--fourthColor);
+  padding-bottom: 1.5rem;
+}
+
+#down-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+/* Home End */
+
+/* About Start */
+.about,
+.menu,
+.lokasi {
+  padding: 8rem 7% 3.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.about h2,
+.menu h2,
+.lokasi h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--firstColor);
+  font-weight: 700;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+  padding-top: 0.325rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  color: var(--firstColor);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.175rem;
+  font-weight: 400;
+  line-height: 1.6;
+  list-style: none;
+  text-align: justify;
+}
+
+/* Menu Start */
+.menu h2,
+.lokasi h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p,
+.lokasi p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu .laris,
+.menu .row .menu-card .all-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: var(--firstColor);
+  margin-top: 2rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 1rem;
+  max-width: calc(
+    100% / 3 - 1.25rem
+  ); /* Hitung lebar maksimum untuk 3 produk per baris */
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 10%;
+  max-width: 100%;
+  height: auto;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.menu .row .menu-card h3 {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.menu .row .menu-card p {
+  font-weight: 400;
+}
+
+.menu .row .menu-card .all-menu {
+  margin-bottom: 3rem;
+}
+/* Menu End */
+
+/* Lokasi Start */
+.lokasi .row {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.lokasi .row .map {
+  flex: 1 1 10rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.lokasi p {
+  color: var(--firstColor);
+  font-weight: 400;
+}
+
+.lokasi .row form {
+  flex: 1 1 20rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.lokasi .row form .input-group,
+.lokasi .row form .input-pesan {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: var(--bg);
+  border: 1px solid var(--firstColor);
+  padding-left: 1rem;
+  flex-wrap: nowrap;
+}
+
+.lokasi .row form .input-group input,
+.lokasi .row form .input-pesan input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: none;
+  color: var(--firstColor);
+}
+
+.lokasi .row form .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  color: var(--fourthColor);
+  background-color: var(--firstColor);
+  cursor: pointer;
+}
+/* lokasi End */
+
+/* Footer Start */
+footer {
+  background-color: var(--firstColor);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .socials a {
+  color: var(--fourthColor);
+  margin: 1rem;
+  transition: all ease 0.45s;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--hoverFirstColor);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: var(--fourthColor);
+  padding: 0.7rem 1rem;
+  transition: all ease 0.45s;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit span {
+  color: var(--fourthColor);
+  font-weight: 700;
+}
+/* Footer End */
+
+/* respnsive */
+/* tab */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #extra {
+    display: inline-block;
+    padding-right: 5rem;
+  }
+
+  .navbar .navbar-right .options {
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    right: -100%;
+    background-color: var(--firstColor);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar.active .options {
+    right: 0;
+  }
+
+  .navbar .options a {
+    color: var(--fourthColor);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-right .options {
+    padding-right: 0;
+  }
+
+  .navbar .navbar-right .options .button {
+    border: none;
+    color: var(--fourthColor);
+    padding: 0.5rem !important;
+    margin: 1.5rem;
+    font-size: inherit;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .navbar .options a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .options a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .home {
+    min-height: 93.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/bg-darken.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .home::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      var(--fourthColor),
+      rgba(248, 250, 229, 0) 20%
+    );
+  }
+
+  .content-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65rem;
+    font-size: 1.75rem;
+    padding-top: 2rem;
+    font-family: "Marck Script", handwriting;
+    color: var(--fourthColor);
+  }
+
+  .scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-family: "Marck Script", handwriting;
+    color: var(--fourthColor);
+    padding-bottom: 1.5rem;
+  }
+
+  #down-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.6rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 20rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
